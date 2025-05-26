@@ -1,0 +1,524 @@
+/* Definir la fuente personalizada */
+@font-face {
+    font-family: 'MiFuentePersonalizada';
+    src: url('ruta/a/tu/fuente.woff2') format('woff2'),
+        url('ruta/a/tu/fuente.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Aplicar la fuente al cuerpo del documento */
+body {
+    font-family: 'MiFuentePersonalizada', sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Barra de navegación */
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: white;
+    color: #667eea;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Sección de búsqueda */
+.buscador {
+    background: white;
+    margin: 20px;
+    padding: 30px; /* Más padding */
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* Sombra más suave */
+}
+
+.buscador h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8em; /* Título más grande */
+}
+
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Más espacio entre elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.filtros input,
+.filtros select {
+    padding: 15px 18px; /* Más padding interno */
+    border: 2px solid #e9ecef; /* Borde más grueso */
+    border-radius: 8px; /* Bordes más redondeados */
+    min-width: 180px; /* Ancho mínimo mayor */
+    font-size: 15px; /* Texto ligeramente más grande */
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.filtros input:focus,
+.filtros select:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px); /* Ligero efecto de elevación */
+}
+
+.filtros button {
+    padding: 15px 25px; /* Más padding en botones */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+#boton-buscar {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+#boton-buscar:hover {
+    background: linear-gradient(135deg, #218838 0%, #1e7e34 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+#boton-limpiar {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+#boton-limpiar:hover {
+    background: linear-gradient(135deg, #545b62 0%, #343a40 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+/* Sección de productos */
+.productos {
+    margin: 30px 20px; /* Más margen superior */
+}
+
+.productos h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px; /* Más espacio debajo del título */
+    font-size: 2.2em; /* Título más grande */
+    font-weight: bold;
+}
+
+/* Grid de recetas */
+.grid-recetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Tarjetas de recetas */
+.tarjeta-receta {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    position: relative;
+}
+
+.tarjeta-receta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Recetas nuevas */
+.tarjeta-receta.receta-nueva {
+    border: 2px solid #28a745;
+    background: linear-gradient(135deg, #f8fff9 0%, #ffffff 100%);
+}
+
+.tarjeta-receta.receta-nueva:hover {
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3);
+}
+
+/* Badge para recetas nuevas */
+.badge-nueva {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(40, 167, 69, 0.3);
+    z-index: 10;
+}
+
+.tarjeta-receta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-receta h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.tarjeta-receta p {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.tarjeta-receta p strong {
+    color: #333;
+}
+
+/* Paginación */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+}
+
+.paginacion button {
+    padding: 10px 15px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.paginacion button:hover:not(:disabled) {
+    background-color: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+.paginacion button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.paginacion span {
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+}
+
+/* Tabla de resultados */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+table th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table td {
+    border-bottom: 1px solid #eee;
+    padding: 12px;
+    text-align: center;
+    color: #666;
+}
+
+table tr:hover {
+    background-color: #f8f9fa;
+}
+
+table img {
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Sección de resultados */
+#resultado-filtros {
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#resultado-filtros h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Loading */
+#loading {
+    text-align: center;
+    font-weight: bold;
+    padding: 40px;
+    color: #667eea;
+    font-size: 1.2em;
+}
+
+/* Estilos para el formulario de registro */
+.form-header {
+    text-align: center;
+    margin: 50px 0 40px 0; /* Más espacio arriba y abajo */
+    padding: 30px 20px; /* Padding adicional */
+    color: #333;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-radius: 15px;
+}
+
+.form-header h1 {
+    font-size: 2.8em; /* Tamaño ligeramente mayor */
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.form-header p {
+    font-size: 1.2em; /* Texto más grande */
+    color: #666;
+    max-width: 700px; /* Ancho máximo mayor */
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.form-section {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Grupos de campos */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: #666;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/* Botones */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.btn-registrar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-registrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-limpiar {
+    background-color: #6c757d;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-limpiar:hover {
+    background-color: #545b62;
+    transform: translateY(-2px);
+}
+
+/* Campos requeridos */
+.form-group input[required],
+.form-group select[required] {
+    border-left: 4px solid #667eea;
+}
+
+/* Estados de validación */
+.form-group input.error {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+.form-group input.success {
+    border-color: #28a745;
+    background-color: #f8fff9;
+}
+
+/* Mensaje de error */
+.error-message {
+    color: #dc3545;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Responsive para el formulario */
+@media (max-width: 768px) {
+    .form-section {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .form-header h1 {
+        font-size: 2em;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-registrar,
+    .btn-limpiar {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .filtros {
+        flex-direction: column;
+    }
+    
+    .filtros input,
+    .filtros select {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .grid-recetas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .navbar {
+        padding: 10px;
+    }
+    
+    .navbar button {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buscador,
+    .productos,
+    #resultado-filtros {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .tarjeta-receta {
+        padding: 15px;
+    }
+    
+    .productos h2 {
+        font-size: 1.5em;
+    }
+}

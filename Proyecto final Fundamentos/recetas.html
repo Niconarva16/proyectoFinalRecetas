@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Recetas del Restaurante</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button onclick="location.href='html/registro.html'">Registrar Receta</button>
+        <button onclick="location.href='html/indicaciones.html'">Instrucciones</button>
+        <button onclick="location.href='recetas.html'">Ver Recetas</button>
+    </nav>
+
+    <main>
+        <!-- Sección de filtros -->
+        <section class="buscador">
+            <h2>Buscar Recetas</h2>
+            <div class="filtros">
+                <input type="text" id="filtro-nombre" placeholder="Nombre de la receta">
+                <select id="filtro-categoria">
+                    <option value="">Todas las categorías</option>
+                    <option value="Italiana">Italiana</option>
+                    <option value="Mexicana">Mexicana</option>
+                    <option value="Japonesa">Japonesa</option>
+                    <option value="Española">Española</option>
+                    <option value="Peruana">Peruana</option>
+                    <option value="Mediterránea">Mediterránea</option>
+                    <option value="India">India</option>
+                    <option value="Turca">Turca</option>
+                    <option value="Americana">Americana</option>
+                    <option value="Húngara">Húngara</option>
+                    <option value="Canadiense">Canadiense</option>
+                    <option value="Rusa">Rusa</option>
+                    <option value="Alemana">Alemana</option>
+                    <option value="Vietnamita">Vietnamita</option>
+                    <option value="Indonesa">Indonesa</option>
+                    <option value="Coreana">Coreana</option>
+                    <option value="Australiana">Australiana</option>
+                    <option value="Francesa">Francesa</option>
+                    <option value="Latina">Latina</option>
+                    <option value="Tailandesa">Tailandesa</option>
+                    <option value="Polaca">Polaca</option>
+                    <option value="China">China</option>
+                    <option value="Hawaiana">Hawaiana</option>
+                    <option value="Suiza">Suiza</option>
+                    <option value="Griega">Griega</option>
+                    <option value="Fusión">Fusión</option>
+                </select>
+                <input type="number" id="filtro-precio-max" placeholder="Precio máximo ($)">
+                <button id="boton-buscar">Buscar</button>
+                <button id="boton-limpiar">Limpiar</button>
+            </div>
+        </section>
+
+        <!-- Sección de productos (tarjetas) -->
+        <section class="productos">
+            <h2>Nuestras recetas</h2>
+            <div class="grid-recetas" id="lista-recetas">
+            <!-- Tarjetas generadas dinámicamente con JS -->
+            </div>
+            <!-- Paginación -->
+            <div class="paginacion">
+                <button id="anterior" disabled>Anterior</button>
+                <span id="pagina-actual">Página 1</span>
+                <button id="siguiente">Siguiente</button>
+            </div>
+        </section>
+    
+    </section>
+    </main>
+    
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

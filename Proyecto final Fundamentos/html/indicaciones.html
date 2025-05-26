@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/indicaciones.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <button onclick="location.href='registro.html'">Registrar Receta</button>
+        <button onclick="location.href='indicaciones.html'">Instrucciones</button>
+        <button onclick="location.href='../recetas.html'">Ver Recetas</button>
+    </nav>
+
+    <main class="contenedor-indicaciones">
+        <!-- Título de la página -->
+        <header class="header-indicaciones">
+            <h1>¡Bienvenido al Sistema de Recetas!</h1>
+        </header>
+        
+        <!-- Descripción de la empresa -->
+        <section class="descripcion-empresa">
+            <div class="empresa-card">
+                <h2>🍽️ Sobre Nosotros</h2>
+                <p>
+                    Es el sistema integral de gestión de recetas para restaurantes profesionales. 
+                    Nuestra plataforma te permite registrar, organizar y buscar las recetas exclusivas que 
+                    hacen único a tu restaurante.
+                </p>
+                <p>
+                    Puedes mantener un catálogo detallado de todas tus creaciones culinarias, 
+                    desde platos principales hasta postres exquisitos, con información completa sobre 
+                    ingredientes, tiempos de preparación y clasificación por categorías.
+                </p>
+                <div class="empresa-stats">
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Indicaciones de cómo crear un producto -->
+        <section class="instrucciones-registro">
+            <div class="instrucciones-card">
+                <h2>📝 ¿Cómo registrar una nueva receta?</h2>
+                <div class="pasos-container">
+                    <div class="paso">
+                        <div class="paso-numero">1</div>
+                        <div class="paso-content">
+                            <h3>Accede al Formulario</h3>
+                            <p>Haz clic en el botón <strong>"Registrar Receta"</strong> en la barra de navegación.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">2</div>
+                        <div class="paso-content">
+                            <h3>Completa la Información Básica</h3>
+                            <ul>
+                                <li><strong>Nombre:</strong> Máximo 20 caracteres (ej: "Tiramisú Clásico")</li>
+                                <li><strong>Categoría:</strong> Selecciona entre las opciones disponibles</li>
+                                <li><strong>Imagen:</strong> Elige la imagen que mejor represente tu receta</li>
+                                <li><strong>Precio:</strong> Ingresa el precio en pesos colombianos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">3</div>
+                        <div class="paso-content">
+                            <h3>Crea un Código Único</h3>
+                            <p>El código debe cumplir estos requisitos:</p>
+                            <div class="requisitos-codigo">
+                                <span class="requisito">✅ Mínimo 8 caracteres</span>
+                                <span class="requisito">✅ Al menos 1 letra mayúscula</span>
+                                <span class="requisito">✅ Al menos 1 letra minúscula</span>
+                                <span class="requisito">✅ Mínimo 2 números</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">4</div>
+                        <div class="paso-content">
+                            <h3>Información Adicional (Opcional)</h3>
+                            <ul>
+                                <li><strong>Tiempo de preparación:</strong> Ej: "30 minutos"</li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="paso">
+                        <div class="paso-numero">5</div>
+                        <div class="paso-content">
+                            <h3>Registrar y Listo</h3>
+                            <p>Presiona <strong>"Registrar Receta"</strong> y tu nueva creación aparecerá automáticamente en el menú.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ejemplo de opciones disponibles -->
+        <section class="ejemplos-opciones">
+            <div class="ejemplos-card">
+                <h2>💡 Ejemplos de Recetas Válidas</h2>
+                
+                <div class="ejemplos-grid">
+                    <div class="ejemplo-receta">
+                        <h3>Ejemplo 1: Postre</h3>
+                        <div class="ejemplo-datos">
+                            <p><strong>Nombre:</strong> "Tiramisú Clásico"</p>
+                            <p><strong>Categoría:</strong> "Postres"</p>
+                            <p><strong>Código:</strong> "TiraMs12"</p>
+                            <p><strong>Precio:</strong> $15.000</p>
+                            <p><strong>Tiempo:</strong> "45 minutos"</p>
+                            <p><strong>Dificultad:</strong> "Medio"</p>
+                        </div>
+                        <div class="ejemplo-validacion">
+                            <span class="check">✅ Código válido: 8+ caracteres, T(mayús), i,r,a,s(minús), 1,2(números)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ejemplo-receta">
+                        <h3>Ejemplo 2: Plato Principal</h3>
+                        <div class="ejemplo-datos">
+                            <p><strong>Nombre:</strong> "Paella Valenciana"</p>
+                            <p><strong>Categoría:</strong> "Española"</p>
+                            <p><strong>Código:</strong> "PaeVa25"</p>
+                            <p><strong>Precio:</strong> $45.000</p>
+                            <p><strong>Tiempo:</strong> "90 minutos"</p>
+                            <p><strong>Dificultad:</strong> "Difícil"</p>
+                        </div>
+                        <div class="ejemplo-validacion">
+                            <span class="check">✅ Código válido: 8+ caracteres, P,V(mayús), a,e,a(minús), 2,5(números)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="ejemplo-receta error">
+                        <h3>❌ Ejemplo Incorrecto</h3>
+                        <div class="ejemplo-datos">
+                            <p><strong>Nombre:</strong> "Sopa muy deliciosa de la abuela"</p>
+                            <p><strong>Código:</strong> "sopa"</p>
+                        </div>
+                        <div class="ejemplo-validacion">
+                            <span class="error-check">❌ Nombre muy largo (más de 20 caracteres)</span>
+                            <span class="error-check">❌ Código muy corto (menos de 8 caracteres)</span>
+                            <span class="error-check">❌ Código sin mayúsculas ni números</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botón de redirección a Registro de productos -->
+        <section class="accion-principal">
+            <div class="cta-container">
+
+                <button onclick="location.href='registro.html'" class="boton-registro-principal">
+                    🍽️ Registrar Nueva Receta
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

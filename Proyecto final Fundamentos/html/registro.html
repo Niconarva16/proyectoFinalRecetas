@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Receta</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <button onclick="location.href='registro.html'">Registrar Receta</button>
+        <button onclick="location.href='indicaciones.html'">Instrucciones</button>
+        <button onclick="location.href='../recetas.html'">Ver Recetas</button>
+    </nav>
+
+    <!-- Título de la página -->
+    <header class="form-header">
+        <h1>Registrar Nueva Receta</h1>
+        <p>Completa todos los campos para añadir una receta a nuestro menú del restaurante.</p>
+    </header>
+
+    <!-- Formulario principal -->
+    <main>
+        <section class="form-section">
+            <form id="form-receta">
+                
+                <!-- Campo: Nombre (String, máximo 20 caracteres) -->
+                <div class="form-group">
+                    <label for="nombre">Nombre de la receta *:</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        maxlength="20" 
+                        placeholder="Ej: Tiramisú Clásico" 
+                        required
+                    >
+                    <small>Máximo 20 caracteres.</small>
+                </div>
+
+                <!-- Selector de categoría (Mínimo 5 categorías) -->
+                <div class="form-group">
+                    <label for="categoria">Categoría *:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="Italiana">Italiana</option>
+                        <option value="Postres">Postres</option>
+                        <option value="Mariscos">Mariscos</option>
+                        <option value="Vegana">Vegana</option>
+                        <option value="Asiática">Asiática</option>
+                        <option value="Mexicana">Mexicana</option>
+                        <option value="Española">Española</option>
+                        <option value="Francesa">Francesa</option>
+                    </select>
+                </div>
+
+                <!-- Selector de imagen (Mínimo 10 opciones) -->
+                <div class="form-group">
+                    <label for="imagen">Imagen *:</label>
+                    <select id="imagen" name="imagen" required>
+                        <option value="">Seleccione una imagen</option>
+                        <option value="carbonara.jpg">Pasta Carbonara</option>
+                        <option value="pizza margarita.jpg">Pizza Margherita</option>
+                        <option value="tacosalpastor.jpg">Tacos al Pastor</option>
+                        <option value="sushi.jpg">Sushi Variado</option>
+                        <option value="paella.jpg">Paella Española</option>
+                        <option value="ceviche.jpg">Ceviche Peruano</option>
+                        <option value="falafel.jpg">Falafel Mediterráneo</option>
+                        <option value="biryani.jpg">Biryani Indio</option>
+                        <option value="baklava.jpg">Baklava Turco</option>
+                        <option value="chili con carne.jpg">Chili con Carne</option>
+                    </select>
+                    <small>Selecciona la imagen que mejor represente tu receta.</small>
+                </div>
+
+                <!-- Campo: Precio (Solo números, formato pesos) -->
+                <div class="form-group">
+                    <label for="precio">Precio (COP) *:</label>
+                    <input 
+                        type="number" 
+                        id="precio" 
+                        name="precio" 
+                        placeholder="15000" 
+                        min="1" 
+                        step="1"
+                        required
+                    >
+                    <small>Precio en pesos colombianos (sin puntos ni comas).</small>
+                </div>
+
+                <!-- Campo: Código (Mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 2 números) -->
+                <div class="form-group">
+                    <label for="codigo">Código de receta *:</label>
+                    <input 
+                        type="text" 
+                        id="codigo" 
+                        name="codigo" 
+                        placeholder="Ej: TiraMs12" 
+                        minlength="8"
+                        required
+                    >
+                    <small>Mínimo 8 caracteres: al menos 1 mayúscula, 1 minúscula y 2 números.</small>
+                </div>
+
+                <!-- Atributo adicional 1: Tiempo de preparación -->
+                <div class="form-group">
+                    <label for="tiempo">Tiempo de preparación:</label>
+                    <input 
+                        type="text" 
+                        id="tiempo" 
+                        name="tiempo" 
+                        placeholder="Ej: 30 minutos"
+                    >
+                    <small>Tiempo estimado para preparar la receta.</small>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-registrar">
+                        Registrar Receta
+                    </button>
+                    <button type="button" class="btn-limpiar" onclick="limpiarCampos()">
+                        Limpiar Campos
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="../js/registro.js"></script>
+</body>
+</html>
